@@ -1,0 +1,35 @@
+EXCEPTIONS:
+______________________________________________________
+
+raise ValueErrors
+
+dir(__builtins__)
+
+
+
+PROPERTY:
+______________________________________________________
+
+c.temperature
+
+c.__dict__
+
+__dict__['temperature']
+
+property(fget=None, fset=None, fdel=None, doc=None)
+
+temperature = property(get_temperature,set_temperature)
+
+# make empty property
+temperature = property()
+# assign fget
+temperature = temperature.getter(get_temperature)
+# assign fset
+temperature = temperature.setter(set_temperature)
+
+
+
+
+
+
+
