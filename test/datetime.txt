@@ -1,0 +1,73 @@
+datetime.datetime.now()
+
+datetime.date.today()
+
+dir(datetime)
+
+1.datetime.date
+----------------------------------
+datetime.date(2019, 4, 13)
+date.today()
+timestamp = date.fromtimestamp(1326244364)
+
+today = date.today() 
+print("Current year:", today.year)
+print("Current month:", today.month)
+print("Current day:", today.day)
+
+2.datetime.time
+-----------------------------------
+# time(hour = 0, minute = 0, second = 0)
+a = time()
+print("a =", a)
+
+# time(hour, minute and second)
+b = time(11, 34, 56)
+print("b =", b)
+
+# time(hour, minute and second)
+c = time(hour = 11, minute = 34, second = 56)
+print("c =", c)
+
+# time(hour, minute, second, microsecond)
+d = time(11, 34, 56, 234566)
+print("d =", d)
+
+
+a = time(11, 34, 56)
+a.hour
+a.microsecond
+
+3.datetime.datetime
+------------------------------------------
+a = datetime(2018, 11, 28)
+
+# datetime(year, month, day, hour, minute, second, microsecond)
+b = datetime(2017, 11, 28, 23, 55, 59, 342380)
+
+a.timestamp()
+
+
+4.datetime.timedelta
+-----------------------------------------
+t1 = date(year = 2018, month = 7, day = 12)
+t2 = date(year = 2017, month = 12, day = 23)
+t3 = t1 - t2
+
+t4 = datetime(year = 2018, month = 7, day = 12, hour = 7, minute = 9, second = 33)
+t5 = datetime(year = 2019, month = 6, day = 10, hour = 5, minute = 55, second = 13)
+t6 = t4 - t5
+
+type(t3)
+
+Difference between two timedelta objects
+t1 = timedelta(weeks = 2, days = 5, hours = 1, seconds = 33)
+t2 = timedelta(days = 4, hours = 11, minutes = 4, seconds = 54)
+t3 = t1 - t2
+
+t1 = timedelta(seconds = 33)
+t2 = timedelta(seconds = 54)
+t3 = t1 - t2
+print("t3 =", t3)
+print("t3 =", abs(t3))
+
