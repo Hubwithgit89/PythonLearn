@@ -1,0 +1,40 @@
+Data base conection
+-------------------------------------------------
+------------------------------------------------
+1.connector
+
+pip install mysql-connector
+
+2. import mysql.connector
+
+mydb = mysql.connector.connect(host="locahost",user="sara",passwd="1234")
+
+mycursor= mydb.cursor()
+
+3. To Show all databases
+mycursor.execute("show databases")
+
+for i in mycursor:
+	print(i)
+
+
+4.To handle with tables
+
+mydb = mysql.connector.connect(host="locahost",user="sara",passwd="1234",database="SSdatabase")
+
+mycursor= mydb.cursor()
+mycursor.execute("select * from student")
+
+for i in mycursor:
+	print(i)
+
+5.result=mycursor.fetchall()
+for i in result:
+	print(i)
+
+6. fetchone()
+
+-----------------------------------------------------------------
+-------------------------------------------------------------------
+
+
